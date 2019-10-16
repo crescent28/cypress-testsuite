@@ -9,7 +9,7 @@ context('Table MultiSelect', () => {
 		cy.new_form("Sales Order");
 		cy.fill_field("Customer", "Test", "Link");
     cy.fill_field("Date", "16-10-2019", "Link");
-  		cy.fill_table("items", [{"item_code": "1019"} ,{"delivery_date": "16-10-2019"}, {"quantity": "2"}, {"basic_rate": "300"}, {rate: "3,345,345.0000"}]);
+  		cy.fill_table("items", [{"item_code": "1019"} ,{"delivery_date": "16-10-2019"}, {"quantity": "2"}, {rate: "3,345,345.0000"}]);
 		cy.save();
 				cy.submit();
     		// Creating a Delivery note against a Sales Order.
