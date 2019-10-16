@@ -7,8 +7,8 @@ context('Table MultiSelect', () => {
 
 	it('Generate Sales Order', () => {
 		cy.new_form("Sales Order");
-		cy.fill_field("Customer", "Test", "Link");
-    cy.fill_field("Date", "16-10-2019", "Link");
+		cy.fill_field("customer", "Test", "Link");
+    cy.fill_field("transaction_date", "16-10-2019", "Date");
   		cy.fill_table("items", [{"item_code": "1019"} ,{"delivery_date": "16-10-2019"}, {"quantity": "2"}, {rate: "3,345,345.0000"}]);
 		cy.save();
 				cy.submit();
