@@ -12,6 +12,7 @@ context('Table MultiSelect', () => {
 	cy.fill_field(“subject”, “Test", “Data");
 	cy.fill_field(“message”, “Test", “Data");
 	cy.save();
-	cy.submit();
+	// cy.submit();
+		cy.get_toolbar("Send");
 	});
 	});
