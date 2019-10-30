@@ -3,7 +3,7 @@ context('Table MultiSelect', () => {
 	cy.login();
 	});
 	
-	it('Generate Product Bundle’, () => {
+	it("Generate Product Bundle", () => {
 	cy.new_form(“Product Bundle”);
 	cy.fill_field("new_item_code", “123", "Link");
 	// cy.fill_field(“transaction_date”, "16-10-2019", "Date");
