@@ -1,0 +1,18 @@
+// Test case for creating a simple Stock Entry for type:Material transfer for Manufacture.
+
+context('Table MultiSelect', () => {
+	beforeEach(() => {
+		cy.login();
+	});
+
+	it('Generate Stock Entry', () => {
+		cy.new_form("Stock Entry");
+		cy.fill_field("stock_entry_type", "Material Transfer for Manufacture", "Link");
+    cy.fill_field("from_warehouse", "Test - CIIT", "Link");
+    cy.fill_field("to_warehouse", "Work In Progress - CIIT", "Link");
+  		cy.fill_table("items", [{"s_warehouse": "SCM node - CIIT"} ,{"t_warehouse": "Stores - CIIT"}, {"item_code": "1019"}, {"item_group": "Test 1"} {"quantity": "5"}][{"s_warehouse": "Work In Progress - CIIT"} ,{"t_warehouse": "Stores - CIIT"}, {"item_code": "MI TV"}, {"item_group": "All Item Groups"} {"quantity": "9"}]);
+    cy.save();
+		cy.submit();
+    		cy.get_button("Ledger");
+	});
+});
