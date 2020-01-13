@@ -23,6 +23,8 @@ context('Table MultiSelect', () => {
 	//	cy.wait(1000);
     		// Ensure Paid To account is fetched after selecting mode of payment.
     		
+		//Single function to validate the repayment schedule date is pending
+		
         cy.wait(100);
 		cy.submit();
     		cy.get_button("Ledger");
